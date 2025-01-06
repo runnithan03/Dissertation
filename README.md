@@ -1,8 +1,9 @@
 # Multiple Response Regression - Dissertation Project  
 **Author**: Raul Unnithan
-**Institution**: [Durham University]  
-**Course**: [Mathematics and Statistics]  
-**Date**: [April 2025]  
+**Supervisor**: Ric Crossman
+**Institution**: Durham University  
+**Course**: [Mathematics and Statistics  
+**Date**: April 2025  
 
 ---
 
