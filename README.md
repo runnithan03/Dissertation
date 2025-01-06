@@ -2,7 +2,7 @@
 **Author**: Raul Unnithan
 **Supervisor**: Ric Crossman
 **Institution**: Durham University  
-**Course**: [Mathematics and Statistics  
+**Course**: Mathematics and Statistics  
 **Date**: April 2025  
 
 ---
