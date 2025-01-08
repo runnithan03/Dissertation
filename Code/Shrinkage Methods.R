@@ -80,7 +80,7 @@ cat("Ridge NRMSE (Test):", calculate_nrmse(ridge_test_predictions, Y_test), "\n"
 
 # Elastic Net Regression (alpha tuning)
 cat("Tuning Elastic Net...\n")
-alpha_values <- seq(0.1, 0.9, by = 0.1)  # More granular alpha values
+alpha_values <- seq(0.1, 0.9, by = 0.1)
 elastic_results <- data.frame(alpha = numeric(), lambda = numeric(), train_nrmse = numeric(), test_nrmse = numeric())
 
 for (alpha in alpha_values) {
@@ -111,7 +111,7 @@ ggplot(elastic_results, aes(x = alpha, y = test_nrmse)) +
 # Group Lasso
 cat("Running Group Lasso...\n")
 
-# Define groups (e.g., group predictors by domain knowledge or categories)
+# Define groups (group predictors by categories)
 groups <- rep(1:length(predictor_vars), each = 1)  # Example: Each predictor is its own group
 group_lasso_model <- cv.grpreg(X_train, Y_train, group = groups, penalty = "grLasso")
 
@@ -123,7 +123,6 @@ group_lasso_predictions <- predict(group_lasso_model, X_test, lambda = group_lam
 group_lasso_nrmse <- calculate_nrmse(group_lasso_predictions, Y_test)
 cat("Group Lasso NRMSE (Test):", group_lasso_nrmse, "\n")
 
-# Model Comparison
 cat("Model Comparison:\n")
 cat("Lasso NRMSE (Test):", calculate_nrmse(lasso_test_predictions, Y_test), "\n")
 cat("Ridge NRMSE (Test):", calculate_nrmse(ridge_test_predictions, Y_test), "\n")
