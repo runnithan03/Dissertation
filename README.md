@@ -18,6 +18,60 @@ The models include classical statistical methods, shrinkage approaches, and mode
 
 ---
 
+## 🔍 Methods Used
+
+### 📊 Statistical Models
+
+- **Multiple-Response Linear Regression (MRLR)**  
+- **Sequential MANOVA Stepwise Selection**  
+  Custom implementation using Wilks' Lambda and ANRMSE  
+- **Shrinkage Methods**  
+  - Ridge Regression  
+  - Reduced-Rank Ridge Regression  
+  - Multivariate Regression with Covariance Estimation (MRCE)
+
+### 🌲 Machine Learning Models
+
+- **Random Forests** (via Multivariate Regression Trees & Covariance Regression)  
+- **XGBoost** with Cholesky Decomposition for multivariate prediction
+
+---
+
+## 🧪 Dataset
+
+- Sourced from Kaggle; filtered to include equity funds only  
+- **1248 observations**, **12 predictor variables**
+- **2 response variables**:
+  - **Return on Equity (ROE)**  
+  - **Sustainability Score** (Morningstar ESG rating)
+
+**Preprocessing Includes:**
+- Imputation via Random Forests & Linear Regression  
+- Multivariate normality tested via Mardia's test  
+- Multicollinearity checked using VIF
+
+---
+
+## 📈 Evaluation Metric
+
+All models are compared using:
+- **ANRMSE** (Average Normalised Root Mean Square Error)  
+- Supplemented by **Wilks’ Lambda** for feature selection during stepwise procedures
+
+---
+
+## 🧰 Tools and Environment
+
+- **Language:** R  
+- **Libraries:** `car`, `glmnet`, `xgboost`, `ranger`, `psych`, `keras`, `tensorflow`, `tidyverse`, etc.
+
+---
+
+##🛡️ Disclaimer
+This work was completed as part of my undergraduate degree and is intended for academic and illustrative purposes only. Not financial advice.
+
+---
+
 ## 📁 Repository Structure
 
 ```plaintext
