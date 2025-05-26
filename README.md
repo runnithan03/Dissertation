@@ -67,7 +67,8 @@ All models are compared using:
 
 ---
 
-##🛡️ Disclaimer
+## 🛡️ Disclaimer
+
 This work was completed as part of my undergraduate degree and is intended for academic and illustrative purposes only. Not financial advice.
 
 ---
